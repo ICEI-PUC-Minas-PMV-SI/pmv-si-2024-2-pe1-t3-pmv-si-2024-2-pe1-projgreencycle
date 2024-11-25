@@ -67,11 +67,11 @@
                 <img src="https://via.placeholder.com/30" alt="Foto do Usuário" class="user-photo">
                 <div class="user-details">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" value="João da Silva">
+                    <input type="text" id="nome-usuario">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" value="joao@example.com">
+                    <input type="email" id="email-usuario">
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha" value="123456">
+                    <input type="password" id="senha-usuario">
                 </div>
                 <div class="toggle-section">
                     <span>Sou um centro de coleta</span>
@@ -133,4 +133,17 @@
     </footer>
 </body>
 
+<script>
+    // Define o valor dos campos de texto assim que a página é carregada
+    document.addEventListener('DOMContentLoaded', function() {
+      let campoTexto = document.getElementById('nome-usuario');
+      campoTexto.value = localStorage.getItem("name");
+
+      let campoEmail = document.getElementById('email-usuario');
+      campoEmail.value = localStorage.getItem("email");
+
+      let campoSenha = document.getElementById('senha-usuario');
+      campoSenha.value = localStorage.getItem("password");
+    });
+  </script>
 </html>
